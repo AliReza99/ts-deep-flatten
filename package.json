@@ -1,0 +1,39 @@
+{
+  "name": "deep-flatten",
+  "private": false,
+  "version": "1.0.0",
+  "description": "Flattens deeply nested object types into a dot-separated union of keys, treating all optional keys as required. Ideal for working with deeply structured TypeScript types.",
+  "author": "Alireza Bahrani",
+  "license": "MIT",
+  "type": "module",
+  "types": "dist/index.d.ts",
+  "repository": "git@github.com:AliReza99/ts-deep-flatten.git",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "scripts": {
+    "lint:prettier": "prettier --check --cache ./src/**/*.{js,jsx,ts,tsx}",
+    "prettify": "prettier --write --cache ./src/**/*.{js,jsx,ts,tsx}",
+    "lint": "tsc --noEmit && eslint --cache --cache-location ./node_modules/.cache/eslint/ --quiet --ext .js,.jsx,.ts,.tsx,.mjs src",
+    "prebuild": "rimraf dist",
+    "build": "tsc",
+    "do-link": "npm link",
+    "release:patch": "npm version patch",
+    "release:major": "npm version major",
+    "release:private": "npm publish --access=restricted",
+    "release:public": "npm publish --access=public"
+  },
+  "dependencies": {
+    "utility-types": "^3.11.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.48.0",
+    "prettier": "^3.0.3",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.6.2"
+  }
+}
