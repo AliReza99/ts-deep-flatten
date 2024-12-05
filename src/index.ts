@@ -1,4 +1,4 @@
-import type { DeepRequired } from 'utility-types';
+import type { DeepNonNullable, DeepRequired } from 'utility-types';
 
 type DeepFlattenBase<T, Prefix extends string = ''> = T extends (infer U)[]
   ? {
@@ -27,4 +27,4 @@ type DeepFlattenBase<T, Prefix extends string = ''> = T extends (infer U)[]
  *
  * const paths: DeepFlatten<NestedObject> = "e" | "a.d" | "a.b.c"
  */
-export type DeepFlatten<T> = DeepFlattenBase<DeepRequired<T>>;
+export type DeepFlatten<T> = DeepFlattenBase<DeepRequired<DeepNonNullable<T>>>;
