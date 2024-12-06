@@ -1,9 +1,8 @@
 name: Publish npm Package
 
 on:
-  push:
-    tags:
-      - 'v*'  # Trigger on tags like v1.0.0, v1.1.0, etc.
+  release:
+    types: [published]
 
 jobs:
   publish-npm:
