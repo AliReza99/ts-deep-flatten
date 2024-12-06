@@ -1,7 +1,7 @@
 {
   "name": "deep-flatten-type",
   "private": false,
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Flattens deeply nested object types into a dot-separated union of keys, treating all optional keys as required. Ideal for working with deeply structured TypeScript types.",
   "author": "Alireza Bahrani",
   "license": "MIT",
